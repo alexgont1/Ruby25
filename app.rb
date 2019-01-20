@@ -4,7 +4,7 @@ require 'sqlite3'
 db = SQLite3::Database.new 'test.sqlite'
 
 # insert new row
-#db.execute "INSERT INTO Cars (Name, Price) VALUES ('Jaguar', 7000000)"
+db.execute "INSERT OR REPLACE INTO Cars (Name, Price) VALUES ('Jaguar', 7000000)"
 
 # show info from dataBase
 db.execute "SELECT * FROM Cars" do |car|
