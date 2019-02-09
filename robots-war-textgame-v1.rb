@@ -31,7 +31,7 @@ def victory?
 
   if robots_left2 == 0
     puts "Team 1 won, #{robots_left1} robots letf"
-    return false
+    return true
   end
 
   false
@@ -42,8 +42,8 @@ def stats
   # robots that are still alive
   cnt1 = @arr1.count { |x| x == 1 }
   cnt2 = @arr2.count { |x| x == 1 }
-  puts "Team #1: #{cnt1} robots are still alive"
-  puts "Team #2: #{cnt2} robots are still alive"
+  puts "Team #1: #{cnt1} robots"
+  puts "Team #2: #{cnt2} robots"
 end
 
 ### main cycle ###
@@ -53,13 +53,13 @@ loop do
   attack(@arr2)
   exit if victory?
   stats
-  sleep 3
+  sleep 1
   puts # пустая строка
 
   puts 'Team #2 atacks...'
   attack(@arr1)
   exit if victory?
   stats
-  sleep 3
+  sleep 1
   puts
 end
