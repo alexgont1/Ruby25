@@ -7,7 +7,7 @@
 ### Atack ###
 # using array
 def attack(arr)
-  sleep 1 # to slow down our app
+  #sleep 1 # to slow down our app
   i = rand(0..9)
   if arr[i] == 1
     arr[i] = 0
@@ -15,7 +15,7 @@ def attack(arr)
   else
     puts "Cell ##{i} is empty."
   end
-  sleep 1 # to slow down our app
+  #sleep 1 # to slow down our app
 end
 
 ### check victory
@@ -53,13 +53,13 @@ loop do
   attack(@arr2)
   exit if victory?
   stats
-  sleep 1
+  #sleep 1
   puts # пустая строка
 
   puts "\tTeam #2 atacks..."
   attack(@arr1)
   exit if victory?
   stats
-  sleep 1
+  #sleep 1
   puts
 end
